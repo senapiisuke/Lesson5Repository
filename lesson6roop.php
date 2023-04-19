@@ -21,12 +21,14 @@ $arr = [
 ];
 
 // 行ごとの合計
+//array_sum — 配列の中の値の合計を計算する
 $row_total = [
     'r1' => array_sum($arr['r1']),
     'r2' => array_sum($arr['r2']),
     'r3' => array_sum($arr['r3']),
     ];
 // 列ごとの合計
+//array_column — 入力配列から単一のカラムの値を返す
 $column_total = [
     'c1' => array_sum(array_column($arr, 'c1')),
     'c2' => array_sum(array_column($arr, 'c2')),
@@ -61,7 +63,8 @@ th, td {
         //見出しを表示：OK
         echo "<tr><td></td><td>c1</td><td>c2</td><td>c3</td><td>横合計</td></tr>";
         // r1~r3の値を表示する
-        //$arrの要素数になるまで＋１され続ける
+
+        //$arrの要素数（９）になるまで＋１され続ける
         for ($i = 1; $i <= count($arr); $i++) {
             $row_key = "r{$i}";
             echo "<tr><td>{$row_key}</td>";
