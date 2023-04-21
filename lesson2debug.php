@@ -24,7 +24,8 @@ class SelfIntroduction
         string $lastName,
         string $firstName,
         int $age,
-        string $hobby,
+        //","消した
+        string $hobby
     ) {
         $this->lastName     = $lastName;
         $this->firstName    = $firstName;
@@ -47,18 +48,20 @@ class SelfIntroduction
         return $this->hobby;
     }
 }
-
+//インスタンス生成してないから出力されてない、、？
+//$_POSTが空でない場合に{}内を実行
 if (! empty($_POST)) {
+    //それぞれの変数に入力値を代入する
     $lastName         = $_POST['last_name'];
     $firstName        = $_POST['first_name'];
     $age              = $_POST['age'];
     $hobby            = $_POST['hobby'];
-    if ($selfIntroduction) {
+    $selfIntroduction = new SelfIntroduction($lastName, $firstName, $age, $hobby);
         echo '私の名前は'.$selfIntroduction->getFullName().'年齢は'.$selfIntroduction->getAge().'です。';
         echo '<br>';
         echo '趣味は'. $selfIntroduction->getHobby().'です。';
     }
-}
+
 ?>
 <!DOCTYPE html>
 <html lang="ja">
@@ -68,7 +71,7 @@ if (! empty($_POST)) {
 </head>
 <body>
     <section>
-    <form action='./debug02.php' method="post">
+    <form action='lesson2debug.php' method="post">
         <label>姓</label>
         <input type="text" name="last_name"/>
         <label>名</label>
