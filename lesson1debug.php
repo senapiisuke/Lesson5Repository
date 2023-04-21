@@ -15,7 +15,6 @@ if (!empty($_POST['last_name']) && !empty($_POST['first_name'])) {
     echo '私の名前は'.$lastName.$firstName.'です。';
 }
 
-
 ?>
 <!DOCTYPE html>
 <html lang="ja">
