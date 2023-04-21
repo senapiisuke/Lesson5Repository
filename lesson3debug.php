@@ -8,7 +8,6 @@
 // 勝敗は勝ちです。
 // 3回目の勝利です。
 // $_SESSIONの挙動やswitch文については調べてみてください。
-
 session_start();
 //キー'result'が登録されていなければ、０を設定
 if (! isset($_SESSION['result'])) {

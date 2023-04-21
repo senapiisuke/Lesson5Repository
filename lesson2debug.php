@@ -2,7 +2,6 @@
 
 // デバック練習
 // 氏名入力時に入力内容が表示されるようにプログラムを完成させてください。
-
 $createAgeGroup = function () {
     $maxAge = 70;
     $minAge = 18;
