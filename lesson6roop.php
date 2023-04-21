@@ -61,7 +61,7 @@ th, td {
         //見出しを表示：OK
         echo "<tr><td></td><td>c1</td><td>c2</td><td>c3</td><td>横合計</td></tr>";
         // r1~r3の値を表示する
-        //$arrの要素数（９）になるまで＋１され続ける
+        //$arrの要素数になるまで＋１され続ける
         for ($i = 1; $i <= count($arr); $i++) {
             $row_key = "r{$i}";
             echo "<tr><td>{$row_key}</td>";
